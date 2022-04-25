@@ -15,14 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.views.generic import TemplateView
 
-from backend.views import PostGetView, PostPostView, PostCommentView
-
+from backend.views import PostGetView, PostPostView, PostCommentView, GetCommentView, schema_view
 
 urlpatterns = [
-    # path(r'doc', schema_view),
-    path('api/post_comment/', PostCommentView.as_view(), name='post_comment'),
-    path('api/post/', PostPostView.as_view(), name='post'),
+    path('api/comment/', PostCommentView.as_view(), name='post_comment'),
+    path('api/post/', PostPostView.as_view(), name='post_post'),
     path('api/post/<id>', PostGetView.as_view(), name='get_post'),
+    path('api/comment/<id>', GetCommentView.as_view(), name='get_comment'),
     path('admin/', admin.site.urls),
+    path('', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+
 ]
