@@ -18,11 +18,11 @@ from drf_yasg.utils import swagger_auto_schema
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="Snippets API",
+      title="Post and comment API",
       default_version='v1',
       description="Test description",
-      terms_of_service="https://www.google.com/policies/terms/",
-      contact=openapi.Contact(email="contact@snippets.local"),
+      terms_of_service="",
+      contact=openapi.Contact(email="contact@contact.local"),
       license=openapi.License(name="BSD License"),
    ),
    public=True,
