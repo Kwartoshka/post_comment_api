@@ -1,7 +1,7 @@
 ### Инструкция по запуску
 Для проверки задачи необходимы следующие шаги:
 1. Клонировать проект <br>
-`git clone https://github.com/Kwartoshka/json_codes_test.git`
+`git clone https://github.com/Kwartoshka/post_comment_api.git`
 2. Установить зависимости (команда выполняется в корне проекта [где расположен файл manage.py])<br>
 `pip install -r requirements.txt`
 3. Для поднятия БД запустить Docker-compose (необходим установленный Docker-compose) 
